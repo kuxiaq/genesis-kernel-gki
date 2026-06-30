@@ -7,7 +7,7 @@ on:
         description: "Custom Kernel Name (LOCALVERSION)"
         required: true
         type: string
-        default: "-Kono-Ha-Kernel"
+        default: "-genesis-kernel"
       spoof_uname:
         description: "Spoof Uname (SUSFS/Stock Naming)"
         required: true
@@ -274,8 +274,8 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Kono-Ha-${{ env.BUILD_NAME }}
-          path: gki-clo/Kono-Ha-Release
+          name: genesis-${{ env.BUILD_NAME }}
+          path: gki-clo/genesis-Release
           retention-days: 7
 
   release:
